@@ -66,6 +66,7 @@ fs.readdirSync(dirPath).forEach(function(file) {
                 fs.writeFile(outputFile, DocGen.markdown, function(err){
                     console.log(err || "No errors writing " + outputFile);
                 });
+                fs.appendFile(outputFile, `\n\n_This document was updated on: ${(new Date().toLocaleDateString("en-US", { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }))}_`, function(err){console.log(err || "No errors writing " + outputFile);});
             }
         }
     }

@@ -22,6 +22,6 @@
         "docdash": "^1.1.0",
         "jsdoc": "^3.5.5",
         "json-schema-md-doc": "^0.1.82",
-        "yargs": "^17.1.0"
+        "yargs": "^17.1.1"
     }
 }
