@@ -10,12 +10,13 @@
 JSON_SCHEMA_MD_DOC_DIR=$(pwd)
 
 
-node samples/node/docgen.js -i ../OpenMetadata/catalog-rest-service/src/main/resources/json/schema/entity/ -o ../OpenMetadata/docs/openmetadata-apis/schemas/entities/
+node samples/node/docgen.js -i ../OpenMetadata/catalog-rest-service/src/main/resources/json/schema/entity/ -o ../OpenMetadata/docs/openmetadata-apis/schemas/entities
 
 # Change camel case markdown file name to snake case
 cd ../OpenMetadata/docs/openmetadata-apis/schemas/entities/
-mv services/databaseService.md services/database-service.md
-mv tags/tagCategory.md tags/tag-category.md
+mv services/databaseService.md services/databaseservice.md
+mv tags/tagCategory.md tags/tagcategory.md
+mv services/pipelineService.md services/pipelineservice.md
 
 # Workaround - gitbook flattens the directory
 mv data/*.md .
@@ -38,6 +39,7 @@ node samples/node/docgen.js -i ../OpenMetadata/catalog-rest-service/src/main/res
 cd ../OpenMetadata/docs/openmetadata-apis/schemas/types/
 mv auditLog.md auditlog.md
 mv dailyCount.md dailycount.md
+mv entityLineage.md entitylineage.md
 mv entityReference.md entityreference.md
 mv entityUsage.md entityusage.md
 mv jdbcConnection.md jdbcconnection.md
